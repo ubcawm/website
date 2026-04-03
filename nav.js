@@ -6,7 +6,7 @@
   
      var primaryItems = [
       { href: 'index.html',  label: 'Home'   },
-      { href: 'about.html',  label: 'About'  },
+      { href: '/about',  label: 'About'  },
       { href: 'events.html', label: 'Events' },
       { href: 'team.html',   label: 'Team'   },
     ];
