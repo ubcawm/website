@@ -4,24 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team | AWM @ UBC</title>
-  <link rel="icon" type="image/x-icon" href="images/LogoDarkMode.png">
+  <link rel="icon" type="image/x-icon" href="/images/LogoDarkMode.png">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/animations.css">
-
-  <script src="/nav.js"></script>
-  <script src="/footer.js"></script>
-  <script src="/animations.js"></script>
-
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-
     .team-section {
       padding: 80px 5%;
-      max-width: 1200px; 
+      max-width: 1200px;
       margin: 0 auto;
     }
-
     .section-divider {
       display: flex;
       align-items: center;
@@ -29,143 +22,78 @@
       gap: 10px;
       margin-bottom: 24px;
     }
-
     .section-divider .line {
-      width: 48px;
-      height: 1.5px;
-      background: var(--muted-rose);
-      opacity: 0.6;
+      width: 48px; height: 1.5px;
+      background: var(--muted-rose); opacity: 0.6;
     }
-
     .section-divider .dot {
-      width: 7px;
-      height: 7px;
+      width: 7px; height: 7px;
       border-radius: 50%;
       background: var(--muted-rose);
     }
-
-    .dept-block {
-      margin-bottom: 80px; 
-    }
-
-    .dept-block .dept-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
+    .dept-block { margin-bottom: 80px; }
+    .dept-block .dept-header { text-align: center; margin-bottom: 40px; }
     .dept-block .dept-header h2 {
-      font-size: clamp(2rem, 4vw, 3rem); 
-      color: var(--deep-plum);
-      margin-bottom: 6px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--deep-plum); margin-bottom: 6px;
     }
-
     .dept-block .dept-header .sub-label {
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
+      font-size: 0.85rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
       color: var(--royal-purple);
     }
-
     .president-row {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 80px;
+      display: flex; justify-content: center; margin-bottom: 80px;
     }
+    .president-card-wrap { text-align: center; max-width: 450px; }
 
-    .president-card-wrap {
-      text-align: center;
-      max-width: 450px;
-    }
-
-    
     .president-card-wrap .teamMember-img,
     .member-card .teamMember-img {
-        width: 160px; 
-        height: 160px; 
-        border-radius: 50%; 
-
-        background: linear-gradient(135deg, var(--soft-lavender), var(--muted-rose));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-  
-        margin: 0 auto 20px;
-        border: 4px solid rgba(205, 183, 233, 0.5); 
-  
-        overflow: hidden; 
-        position: relative;
-        box-shadow: 0 4px 15px rgba(75, 31, 95, 0.1);
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--soft-lavender), var(--muted-rose));
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      border: 4px solid rgba(205, 183, 233, 0.5);
+      overflow: hidden; position: relative;
+      box-shadow: 0 4px 15px rgba(75, 31, 95, 0.1);
     }
-
     .president-card-wrap .teamMember-img img,
     .member-card .teamMember-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
-        display: block;
+      width: 100%; height: 100%; object-fit: cover; display: block;
     }
-
     .president-card-wrap h3 {
-      font-size: 1.4rem;
-      color: var(--deep-plum);
-      margin-bottom: 6px;
+      font-size: 1.4rem; color: var(--deep-plum); margin-bottom: 6px;
     }
-
     .president-card-wrap .role {
-      font-size: 0.95rem; 
-      color: var(--royal-purple);
-      font-weight: 600;
+      font-size: 0.95rem; color: var(--royal-purple); font-weight: 600;
     }
-
     .members-grid {
       display: grid;
-      
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
-      gap: 30px; 
-      justify-content: center;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px; justify-content: center;
     }
-
     .member-card {
-      background: #fff;
-      border-radius: 18px; 
-      padding: 40px 25px; 
+      background: #fff; border-radius: 18px; padding: 40px 25px;
       text-align: center;
       border: 1px solid rgba(205, 183, 233, 0.3);
       box-shadow: 0 4px 16px rgba(75, 31, 95, 0.08);
       transition: transform 0.25s, box-shadow 0.25s;
     }
-
     .member-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 30px rgba(75, 31, 95, 0.15);
     }
-
     .member-card.vp {
       background: linear-gradient(135deg, var(--light-lilac), #efe8f9);
       border-color: rgba(109, 63, 169, 0.2);
     }
-
-    .member-card h3 {
-      font-size: 1.2rem; 
-      color: var(--deep-plum);
-      margin-bottom: 6px;
-    }
-
-    .member-card .role {
-      font-size: 0.88rem; 
-      color: var(--royal-purple);
-      font-weight: 600;
-    }
+    .member-card h3 { font-size: 1.2rem; color: var(--deep-plum); margin-bottom: 6px; }
+    .member-card .role { font-size: 0.88rem; color: var(--royal-purple); font-weight: 600; }
 
     @media (max-width: 600px) {
-      .members-grid {
-        grid-template-columns: 1fr;
-        max-width: 320px;
-        margin: 0 auto;
-      }
+      .members-grid { grid-template-columns: 1fr; max-width: 320px; margin: 0 auto; }
     }
-
   </style>
 </head>
 <body>
@@ -178,23 +106,21 @@
 </div>
 
 <section class="team-section">
+
   <div class="dept-block reveal">
     <div class="dept-header">
       <div class="section-divider">
-        <div class="line"></div>
-        <div class="dot"></div>
-        <div class="line"></div>
+        <div class="line"></div><div class="dot"></div><div class="line"></div>
       </div>
       <h2>Executive Board</h2>
       <span class="sub-label">Leadership</span>
     </div>
-
     <div class="president-row">
       <div class="president-card-wrap">
         <div class="teamMember-img">
-            <img src="/images/teamPlaceholder.png" alt="President">
-          </div>        
-          <h3>Ava Ahmadi</h3>
+          <img src="/images/teamPlaceholder.png" alt="President">
+        </div>
+        <h3>Ava Ahmadi</h3>
         <div class="role">Founder &amp; President</div>
       </div>
     </div>
@@ -203,26 +129,23 @@
   <div class="dept-block reveal">
     <div class="dept-header">
       <div class="section-divider">
-        <div class="line"></div>
-        <div class="dot"></div>
-        <div class="line"></div>
+        <div class="line"></div><div class="dot"></div><div class="line"></div>
       </div>
       <h2>Communications &amp; Media</h2>
       <span class="sub-label">Outreach &amp; Promotion</span>
     </div>
-
     <div class="members-grid">
       <div class="member-card vp">
         <div class="teamMember-img">
-            <img src="/images/Emily.png" alt="Media">
-          </div>
-          <h3>Emily Lu</h3>
+          <img src="/images/Emily.png" alt="VP Communications">
+        </div>
+        <h3>Emily Lu</h3>
         <div class="role">VP Communications &amp; Media</div>
       </div>
       <div class="member-card">
         <div class="teamMember-img">
-            <img src="/images/teamPlaceholder.png" alt="MediaCoordinator">
-          </div>
+          <img src="/images/teamPlaceholder.png" alt="Communications Coordinator">
+        </div>
         <h3>Muslima Akhatkulova</h3>
         <div class="role">Communications &amp; Media Coordinator</div>
       </div>
@@ -232,34 +155,31 @@
   <div class="dept-block reveal">
     <div class="dept-header">
       <div class="section-divider">
-        <div class="line"></div>
-        <div class="dot"></div>
-        <div class="line"></div>
+        <div class="line"></div><div class="dot"></div><div class="line"></div>
       </div>
       <h2>Events</h2>
       <span class="sub-label">Planning &amp; Execution</span>
     </div>
-
     <div class="members-grid">
       <div class="member-card vp">
         <div class="teamMember-img">
-            <img src="/images/teamPlaceholder.png" alt="VPEvents">
-          </div>
+          <img src="/images/teamPlaceholder.png" alt="VP Events">
+        </div>
         <h3>Sarah Porcheron</h3>
         <div class="role">VP Events</div>
       </div>
       <div class="member-card">
         <div class="teamMember-img">
-            <img src="/images/LexiWong.jpg" alt="EventsCoordinator" style="object-position: top;">
-          </div>
+          <img src="/images/LexiWong.jpg" alt="Events Coordinator" style="object-position: top;">
+        </div>
         <h3>Lexi Wong</h3>
         <div class="role">Events Coordinator</div>
       </div>
       <div class="member-card">
         <div class="teamMember-img">
-            <img src="/images/MixiHuang.jpeg" alt="EventsCoordinator">
-          </div>        
-          <h3>Mixi Huang</h3>
+          <img src="/images/MixiHuang.jpeg" alt="Events Coordinator">
+        </div>
+        <h3>Mixi Huang</h3>
         <div class="role">Events Coordinator</div>
       </div>
     </div>
@@ -268,27 +188,24 @@
   <div class="dept-block reveal">
     <div class="dept-header">
       <div class="section-divider">
-        <div class="line"></div>
-        <div class="dot"></div>
-        <div class="line"></div>
+        <div class="line"></div><div class="dot"></div><div class="line"></div>
       </div>
       <h2>External Relations</h2>
       <span class="sub-label">Partnerships &amp; Outreach</span>
     </div>
-
     <div class="members-grid">
       <div class="member-card vp">
         <div class="teamMember-img">
-            <img src="/images/anne.jpg" alt="VPExternalRelations" style="object-position: left;">
-          </div>        
-          <h3>Anneke Jocelyn Hermawan</h3>
+          <img src="/images/anne.jpg" alt="VP External Relations" style="object-position: left;">
+        </div>
+        <h3>Anneke Jocelyn Hermawan</h3>
         <div class="role">VP External Relations</div>
       </div>
       <div class="member-card">
         <div class="teamMember-img">
-            <img src="/images/teamPlaceholder.png" alt="ExternalRelationsCoordinator">
-          </div>        
-          <h3>Trinity Vanderkooi</h3>
+          <img src="/images/teamPlaceholder.png" alt="External Relations Coordinator">
+        </div>
+        <h3>Trinity Vanderkooi</h3>
         <div class="role">External Relations Coordinator</div>
       </div>
     </div>
@@ -297,27 +214,24 @@
   <div class="dept-block reveal">
     <div class="dept-header">
       <div class="section-divider">
-        <div class="line"></div>
-        <div class="dot"></div>
-        <div class="line"></div>
+        <div class="line"></div><div class="dot"></div><div class="line"></div>
       </div>
       <h2>Finance</h2>
       <span class="sub-label">Budget &amp; Funding</span>
     </div>
-
     <div class="members-grid">
       <div class="member-card vp">
         <div class="teamMember-img">
-            <img src="/images/Gurleen_Headshot.jpg" alt="VPFinance" style="object-position: center;">
-          </div>        
-          <h3>Gurleen Rao</h3>
+          <img src="/images/Gurleen_Headshot.jpg" alt="VP Finance">
+        </div>
+        <h3>Gurleen Rao</h3>
         <div class="role">VP Finance</div>
       </div>
       <div class="member-card">
         <div class="teamMember-img">
-            <img src="/images/NegarBayat.jpg" alt="FinanceCoordinator" style="object-position: center;">
-          </div>        
-          <h3>Negar Bayat</h3>
+          <img src="/images/NegarBayat.jpg" alt="Finance Coordinator">
+        </div>
+        <h3>Negar Bayat</h3>
         <div class="role">Finance Coordinator</div>
       </div>
     </div>
@@ -326,20 +240,17 @@
   <div class="dept-block reveal">
     <div class="dept-header">
       <div class="section-divider">
-        <div class="line"></div>
-        <div class="dot"></div>
-        <div class="line"></div>
+        <div class="line"></div><div class="dot"></div><div class="line"></div>
       </div>
       <h2>Mentorship &amp; Community</h2>
       <span class="sub-label">Support &amp; Connection</span>
     </div>
-
     <div class="members-grid">
       <div class="member-card vp">
         <div class="teamMember-img">
-            <img src="/images/KatHeadshot.jpg" alt="Community">
-          </div>        
-          <h3>Catherine Gadalova</h3>
+          <img src="/images/KatHeadshot.jpg" alt="VP Mentorship">
+        </div>
+        <h3>Catherine Gadalova</h3>
         <div class="role">VP Mentorship &amp; Community</div>
       </div>
     </div>
@@ -348,27 +259,24 @@
   <div class="dept-block reveal">
     <div class="dept-header">
       <div class="section-divider">
-        <div class="line"></div>
-        <div class="dot"></div>
-        <div class="line"></div>
+        <div class="line"></div><div class="dot"></div><div class="line"></div>
       </div>
       <h2>Operations</h2>
       <span class="sub-label">Administration &amp; Logistics</span>
     </div>
-
     <div class="members-grid">
       <div class="member-card">
         <div class="teamMember-img">
-            <img src="/images/teamPlaceholder.png" alt="Operations">
-          </div>        
-          <h3>Nandini Rana</h3>
+          <img src="/images/teamPlaceholder.png" alt="Operations">
+        </div>
+        <h3>Nandini Rana</h3>
         <div class="role">Operations</div>
       </div>
       <div class="member-card">
         <div class="teamMember-img">
-            <img src="/images/KaylaZhang.JPG" alt="OperationsSecratory" style="object-position: top;">
-          </div>        
-          <h3>Kayla Zhang</h3>
+          <img src="/images/KaylaZhang.JPG" alt="Operations Secretary" style="object-position: top;">
+        </div>
+        <h3>Kayla Zhang</h3>
         <div class="role">Operations Secretary</div>
       </div>
     </div>
@@ -377,26 +285,23 @@
   <div class="dept-block reveal">
     <div class="dept-header">
       <div class="section-divider">
-        <div class="line"></div>
-        <div class="dot"></div>
-        <div class="line"></div>
+        <div class="line"></div><div class="dot"></div><div class="line"></div>
       </div>
       <h2>Tech &amp; Web</h2>
       <span class="sub-label">Website &amp; Design</span>
     </div>
-
     <div class="members-grid">
       <div class="member-card">
         <div class="teamMember-img">
-            <img src="/images/ramnik_techweb.jpg" alt="Tech/Web" style="object-position: top;">
-          </div>        
-          <h3>Ramnik Kaur Sidhu</h3>
+          <img src="/images/ramnik_techweb.jpg" alt="Tech/Web" style="object-position: top;">
+        </div>
+        <h3>Ramnik Kaur Sidhu</h3>
         <div class="role">Tech / Web</div>
       </div>
       <div class="member-card">
         <div class="teamMember-img">
-            <img src="/images/Firila.jpeg" alt="UI/UX" style="object-position: center;">
-          </div>       
+          <img src="/images/Firila.jpeg" alt="UI/UX">
+        </div>
         <h3>Firila Najma Wahidah</h3>
         <div class="role">UI / UX</div>
       </div>
