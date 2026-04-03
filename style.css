@@ -1,6 +1,4 @@
-
-
-   :root {
+:root {
     --deep-plum:    #4B1F5F;
     --royal-purple: #6D3FA9;
     --soft-lavender:#CDB7E9;
@@ -577,4 +575,3 @@
     transition: max-height .35s ease, padding .3s;
   }
   .accordion-body.open { max-height: 400px; padding: 0 22px 18px; }
-  
