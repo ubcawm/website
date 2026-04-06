@@ -44,7 +44,7 @@
 
   var logoHTML =
     '<a class="nav-logo" href="/" aria-label="AWM at UBC — Home">' +
-      '<img src="/images/LogoLightMode.png" alt="AWM at UBC logo" class="nav-logo-img" />' +
+      '<img src="/images/LogoLightMode2.png" alt="AWM at UBC logo" class="nav-logo-img" />' +
       '<span class="nav-logo-text">AWM @ UBC</span>' +
     '</a>';
 
